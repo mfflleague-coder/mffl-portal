@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MFFL Portal</title>
+  <link rel="stylesheet" href="style.css?v=3" />
+</head>
+<body>
+
+  <main class="app">
+
+    <header class="portal-header">
+      <img src="assets/Logo_White Background.png" class="portal-logo">
+      <div>
+        <h1>MFFL Portal</h1>
+        <p>Player Eligibility Portal</p>
+      </div>
+    </header>
+
+    <section id="login-view" class="login-card">
+      <h2>Team Admin Login</h2>
+
+      <input id="team-id" type="text" placeholder="Team ID">
+      <input id="admin-code" type="password" placeholder="Admin Code">
+
+      <button id="login-button">Sign In</button>
+
+      <p id="login-error"></p>
+    </section>
+
+    <section id="team-view" class="hidden">
+      <button id="logout-button" class="back-button">← Log out</button>
+
+      <header class="team-header">
+        <div id="team-logo" class="team-logo"></div>
+        <h1 id="team-name"></h1>
+        <p id="team-league"></p>
+        <p id="player-count"></p>
+      </header>
+
+      <input
+        id="player-search"
+        class="player-search"
+        type="search"
+        placeholder="Search player name..."
+      />
+
+      <div id="players" class="player-list"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js?v=4"></script>
+</body>
+</html>
