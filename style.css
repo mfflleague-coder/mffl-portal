@@ -346,3 +346,140 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* LOGIN */
+
+.login-card {
+  max-width: 460px;
+  margin: 30px auto 0;
+  background: #ffffff;
+  border: 1px solid var(--mffl-border);
+  border-radius: 24px;
+  padding: 34px;
+  box-shadow: 0 18px 45px rgba(5, 9, 34, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 10px;
+  background: var(--mffl-purple);
+}
+
+.login-card h2 {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--mffl-navy);
+  margin: 12px 0 8px;
+  text-align: center;
+}
+
+.login-card h2::after {
+  content: "Enter your portal access details";
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--mffl-muted);
+}
+
+.login-card input {
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px 18px;
+  border: 2px solid var(--mffl-border);
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--mffl-navy);
+  background: #f9f9f9;
+}
+
+.login-card input:focus {
+  outline: none;
+  border-color: var(--mffl-purple);
+  background: #ffffff;
+}
+
+.login-card button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px 20px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--mffl-purple);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.login-card button:hover {
+  background: var(--mffl-red);
+  transform: translateY(-2px);
+}
+
+#login-error {
+  min-height: 22px;
+  margin-top: 16px;
+  text-align: center;
+  color: var(--mffl-red);
+  font-weight: 800;
+}
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* SQUAD SWITCHER */
+
+.squad-switcher {
+  background: #ffffff;
+  border: 1px solid var(--mffl-border);
+  border-radius: 22px;
+  padding: 22px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.squad-switcher::before {
+  content: "Today's Fixture";
+  display: block;
+  width: 100%;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--mffl-navy);
+  margin-bottom: 8px;
+}
+
+.squad-tab {
+  border: 2px solid var(--mffl-purple);
+  background: #ffffff;
+  color: var(--mffl-purple);
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.squad-tab.active {
+  background: var(--mffl-purple);
+  color: #ffffff;
+}
